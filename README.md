@@ -1,6 +1,7 @@
-=== Common TS Readme ===
+Common TS Readme
+================
 
-= What is it = 
+# What is it 
 Common TS is a Pure Typoscript Extension trying to Speed up Your Typo3 Development Dramaticaly
 * by giving you a Sane Set of Default Configuration for CONFIG and PAGE object.
 * using some automatic Template file Detection to automaticaly include some files like favicon or print.css
@@ -10,20 +11,23 @@ Common TS is a Pure Typoscript Extension trying to Speed up Your Typo3 Developme
 * Search Engine Friendly HTML
 * support for XHTML / and HTML5
 
-== How To Use ==
+How To Use 
+----------
 * Install the extension via Extension manager
 * Include the static Extension template directly after css_styled_content (important!)
 there is an Neat Set of configuration options in the Constants Editor
 
 why should the commonTS Static Template be included directly after css_styled_content
-for convinicen Common_TS strips the HTML Content Element of the <div> wrap around it (Configuration Option). 
+for convinicen Common_TS strips the HTML Content Element of the ´<div>´ wrap around it (Configuration Option). 
 therefore id needet do be loaded after css_styled content. also Common TS pedefines a Global config and page object (also configurationable)
 but som extension write directly to the "page" object and if the commonTS.page object would be copied after such an event.
 the written data would be lost und you get a hard time debugging it. therefore keep it right after css_styled_content and don't worry :)
 
-== Configuration Option (Constants Editor) ==
+Configuration Option (Constants Editor)
+=======================================
 *** To Be Written ***
-== CommonTS Structur ==
+CommonTS Structur
+
 all common TS Objects are defined in a namespace consisting of 3 parts
 prefix.section.objectdefinition
 
@@ -36,7 +40,8 @@ there are currently 2 Exceptions to this rule (config and page)
 
 the objectdefinition is the Copy template for the Object.
 
-== example ==
+example 
+-------
 This Example shows you how to get an 3 Level ul/li menu with full classes for every itemstate first and last item.
 so the menu is easily stylable with css. also the menu gives you some search engine friendly options
 
@@ -58,35 +63,44 @@ so the menu is easily stylable with css. also the menu gives you some search eng
 
 
 
-== Templates Explained ==
+Templates Explained
+===================
 
-= Get a look for your self =
+Get a look for your self 
+------------------------
 i recommend to take a look at the CommonTS code with the Template analyser and Typoscript Explorere
 for your better understanding of the workings of this libary
 
-= config =
+config 
+------
 *** To Be Written ***
 
-= page =
+page 
+----
 *** To Be Written ***
 
-= menu.ul =
+menu.ul 
+-------
 *** To Be Written ***
 
-= menu.ulSimple =
+menu.ulSimple
+-------------
 *** To Be Written ***
 
-= menu.ulMinimal =
+menu.ulMinimal
+-------------- 
 *** To Be Written ***
 
 
 
 
-== Possibble Extensions ==
+Possibble Extensions
+====================
 These Options are currently in Disccution for inclusion
   * Print Page Setup
   * ulPlain // Stripped of any Classes
   * Cleaner Setup Structure by moving config and page objects 
 
-== Known Problems ==
+Known Problems
+==============
 currently no Problems are known
