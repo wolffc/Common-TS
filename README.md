@@ -40,8 +40,11 @@ there are currently 2 Exceptions to this rule (config and page)
 
 the objectdefinition is the Copy template for the Object.
 
-example 
+examples 
 -------
+
+### ul/li Menu 3 Layers Deep
+
 This Example shows you how to get an 3 Level ul/li menu with full classes for every itemstate first and last item.
 so the menu is easily stylable with css. also the menu gives you some search engine friendly options
 
@@ -61,7 +64,9 @@ so the menu is easily stylable with css. also the menu gives you some search eng
       }
     }
 
-
+### Changing an an element-style based on a Page id
+    .my-element {background:yellow} 
+    #cts-page-16 {background:red}
 
 Templates Explained
 ===================
