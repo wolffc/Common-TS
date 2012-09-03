@@ -1,0 +1,27 @@
+(add new changes on top of this file)
+12-08-30 Christian Wolff <chris@connye.com>
+  version 1.3.0
+	renamed static template file you have to reinclude the static template if you upgrade from a previous version
+	Cleaner Body cObject for Better Readability
+	Added Automagic Templating Constants 
+	enabled css & JS minify+compression+concatination
+
+12-04-19 Christian Wolff <chris@connye.com>
+	Version 1.1.0
+	addet Option to Setup the Page Object by default via static templates
+	and some other options to the Constants
+	
+
+12-01-02 Christian Wolff <chris@connye.com>
+	Version 1.0.5
+	Fixed "modern BE" Backend Layout modus
+
+11-05-10 Christian Wolff <chris@connye.com>
+	Version 1.0.3
+	Added language class to body tag. cts-lang-<int> 
+	now its possible to change background images in CSS
+	without switching stylesheets.
+	
+10-03-08 Christian Wolff  <chris@connye.com>
+
+	* Initial release
