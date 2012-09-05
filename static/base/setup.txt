@@ -142,6 +142,7 @@ lib.commonTS.page.bodyTagCObject.20 {
 lib.commonTS.page {
 	shortcutIcon = {$plugin.tx_commonts.template.basePath}{$plugin.tx_commonts.template.imgPath}favicon*
 	includeCSS.000_cts_reset = {$plugin.tx_commonts.template.basePath}{$plugin.tx_commonts.template.cssPath}reset.css
+	includeCSS.000_cts_rte = {$plugin.tx_commonts.template.basePath}{$plugin.tx_commonts.template.cssPath}rte.css
 	includeCSS.000_cts_layout = {$plugin.tx_commonts.template.basePath}{$plugin.tx_commonts.template.cssPath}layout.css
 	includeCSS.000_cts_print = {$plugin.tx_commonts.template.basePath}{$plugin.tx_commonts.template.cssPath}print.css
 	includeCSS.000_cts_print.media = print
