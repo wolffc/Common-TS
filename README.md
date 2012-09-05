@@ -15,16 +15,18 @@ How To Use
 ----------
 * Install the extension via Extension manager
 * Include the static Extension template directly after css_styled_content (important!)
-there is an Neat Set of configuration options in the Constants Editor
+* check out the Constants Editor for COMMON TS configuration Options
 
 why should the commonTS Static Template be included directly after css_styled_content
-for convinicen Common_TS strips the HTML Content Element of the ´<div>´ wrap around it (Configuration Option). 
-therefore id needet do be loaded after css_styled content. also Common TS pedefines a Global config and page object (also configurationable)
-but som extension write directly to the "page" object and if the commonTS.page object would be copied after such an event.
-the written data would be lost und you get a hard time debugging it. therefore keep it right after css_styled_content and don't worry :)
+for convinicen Common_TS strips the HTML Content Element of the '<div>' wrap around it (Configuration Option). 
+therefore it needes to be loaded after css_styled content. also Common TS pedefines a Global config and page object (also configurationable)
+but some extension write directly to the "page" object and if the commonTS.page object would be copied after such an event.
+the written data would be lost and you get a hard time debugging it. therefore keep it right after css_styled_content and don't worry :)
 
 Configuration Option (Constants Editor)
 =======================================
+In The constants Editor you find Many Options which help you to Configure Most important options in an Easy way
+
 *** To Be Written ***
 CommonTS Structur
 
@@ -59,7 +61,7 @@ so the menu is easily stylable with css. also the menu gives you some search eng
         # Creating menu level 2+3
         2 < .1
         3 < .1
-        # give the first layer of the Menu an ID
+        # give the first layer of the Menu an ID otherwise it would be a plain <ul>|</ul>
         1.wrap = <ul id="main-menu">|</ul>
       }
     }
