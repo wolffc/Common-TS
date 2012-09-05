@@ -53,6 +53,7 @@ lib.commonTS.page {
 		10 = TEXT
 		10.value = id="cts-page-{TSFE:id}" 
 		10.insertData = 1
+		10.noTrimWrap = || |
 
 		# body class
 		20 = COA 
