@@ -24,6 +24,11 @@ lib.commonTS.config {
 	renderCharset = utf-8
 	metaCharset = utf-8
 
+
+}
+
+[globalVar= LIT:Production = {$plugin.tx_commonts.config.context}]
+lib.commonTS.config {
 	# enable Compression of JS + CSS
 	compressJs = 1
 	minifyJS = 1
@@ -33,6 +38,7 @@ lib.commonTS.config {
 	minifyCSS = 1 
 	concatenateCss = 1
 }
+[global]
 
 # predefine config object?
 [globalVar= LIT:1 = {$plugin.tx_commonts.predefineConfigObject}]
@@ -79,7 +85,7 @@ lib.commonTS.page {
 			# Language Class
 			100 < .10
 			100.data = GP:L
-			100.noTrimWrap = | cts-lang-||
+			100.noTrimWrap = | cts-lang-| |
 		}
 	}
 	
@@ -140,11 +146,11 @@ lib.commonTS.page.bodyTagCObject.20 {
 # use automagic?
 [globalVar = LIT:1 = {$plugin.tx_common.template.AutomagicEnable}]
 lib.commonTS.page {
-	shortcutIcon = {$plugin.tx_commonts.template.basePath}{$plugin.tx_commonts.template.imgPath}favicon*
-	includeCSS.000_cts_reset = {$plugin.tx_commonts.template.basePath}{$plugin.tx_commonts.template.cssPath}reset.css
-	includeCSS.000_cts_rte = {$plugin.tx_commonts.template.basePath}{$plugin.tx_commonts.template.cssPath}rte.css
-	includeCSS.000_cts_layout = {$plugin.tx_commonts.template.basePath}{$plugin.tx_commonts.template.cssPath}layout.css
-	includeCSS.000_cts_print = {$plugin.tx_commonts.template.basePath}{$plugin.tx_commonts.template.cssPath}print.css
+	shortcutIcon = {$cts.img}favicon*
+	includeCSS.000_cts_reset = {$cts.css}reset.css
+	includeCSS.000_cts_rte = {$cts.css}rte.css
+	includeCSS.000_cts_layout = {$cts.css}layout.css
+	includeCSS.000_cts_print = {$cts.css}print.css
 	includeCSS.000_cts_print.media = print
 }
 [global]
@@ -227,11 +233,37 @@ tt_content.stdWrap.innerWrap.if {
   negate = 1
 }
 
+lib.commonTS.menu.ulPlain = HMENU
+lib.commonTS.menu.ulPlain {
+	1 = TMENU
+	1.wrap = <ul>|</ul>
+	1.NO = 1
+	1.NO {
+		wrapItemAndSub = <li>|</li> 
+		stdWrap.htmlSpecialChars = 1
+	}
+}
+
 ###
 ### script templates
 ###
 lib.commonTS.script.googleAnalytics = COA
-lib.commonTS.script.googleAnalytics {
-	
-}
+lib.commonTS.script.googleAnalytics (
+	### TODO: Write Some google Analytics Libary
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+  _gaq.push(['_setDomainName', 'example.com']);
+  _gaq.push(['_gat._anonymizeIp']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+)
 

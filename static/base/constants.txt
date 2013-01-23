@@ -3,6 +3,10 @@
 	@description: CommonTS Base Constants
 */
 ### BASIC Enable Disable Settings
+
+# cat=common ts/enable/20; type=options[Development,Production]; label=Context:Select the Context you Are Working on in Production Kontext JS + CSS will be minimized and Concatinated (if possible)
+plugin.tx_commonts.config.context=Development
+
 # cat=common ts/enable/50; type=options[xhtml_trans,xhtml_strict,html5]; label=Html Doctype:Sets the Doctype of the page object. default is 'xhtml_trans'
 plugin.tx_commonts.config.doctype=xhtml_trans
 
@@ -38,18 +42,18 @@ plugin.tx_commonts.menu.titleAppend = ...
 
 ### TEMPLATE setting the automagic Template
 
-# cat=common ts/file/100; type=boolean; label= Enable Automatic Template:  if Automatic Template is enabled. this wwill Lode some global files automagically
+# cat=common ts/file/100; type=boolean; label= Enable Automatic Template:  if Automatic Template is enabled. this will Lode some global files automagically
 plugin.tx_common.template.AutomagicEnable = 1
 
 # cat=common ts/file/110; type=string; label= Template Base Path (AT): The Base Path of to your Template folder include the slash at the end "...plate/"
-plugin.tx_commonts.template.basePath = fileadmin/template/
+cts.tpl = fileadmin/template/
 
 # cat=common ts/file/120; type=string; label= Javascript Path (AT): the path where Your Javascript is Stored. including slash ad the end. if found There jQuery is included automaticaly
-plugin.tx_commonts.template.jsPath = javascript/
+cts.js = fileadmin/template/javascript/
 
 # cat=common ts/file/130; type=string; label= CSS Path (AT): the path where Your CSS is Stored. including slash ad the end. following styles will be included if found reset.css, layout.css, print.css (media print)
-plugin.tx_commonts.template.cssPath = css/
+cts.css = fileadmin/template/css/
 
 # cat=common ts/file/140; type=string; label= Image Path (AT): the path where Your Template Related Images are Stored. including slash ad the end. following styles will be included if found reset.css, layout.css, print.css (media print)
-plugin.tx_commonts.template.imgPath = images/
+cts.img = fileadmin/template/images/
 

@@ -18,32 +18,13 @@ How To Use
 * check out the Constants Editor for COMMON TS configuration Options
 
 why should the commonTS Static Template be included directly after css_styled_content
-for convinicen Common_TS strips the HTML Content Element of the '<div>' wrap around it (Configuration Option). 
+for convinicen Common_TS strips the HTML Content Element of the div-wrap around it (Configuration Option). 
 therefore it needes to be loaded after css_styled content. also Common TS pedefines a Global config and page object (also configurationable)
 but some extension write directly to the "page" object and if the commonTS.page object would be copied after such an event.
 the written data would be lost and you get a hard time debugging it. therefore keep it right after css_styled_content and don't worry :)
 
-Configuration Option (Constants Editor)
-=======================================
-In The constants Editor you find Many Options which help you to Configure Most important options in an Easy way
-
-*** To Be Written ***
-CommonTS Structur
-
-all common TS Objects are defined in a namespace consisting of 3 parts
-prefix.section.objectdefinition
-
-the prefix is always lib.commonTS 
-and is manly there for conflict avoidance
-
-the section indicates a scope of object found in this sup tree.
-like menu. contains all menu Templates
-there are currently 2 Exceptions to this rule (config and page)
-
-the objectdefinition is the Copy template for the Object.
-
-examples 
--------
+example Typoscript
+------------------
 
 ### ul/li Menu 3 Layers Deep
 
@@ -69,6 +50,66 @@ so the menu is easily stylable with css. also the menu gives you some search eng
 ### Changing an an element-style based on a Page id
     .my-element {background:yellow} 
     #cts-page-16 {background:red}
+
+Configuration Option (Constants Editor)
+=======================================
+In The constants Editor you find Many Options which help you to Configure Most important options in an Easy way
+
+*** To Be Written ***
+CommonTS Structur
+
+all common TS Objects are defined in a namespace consisting of 3 parts
+prefix.section.objectdefinition
+
+the prefix is always lib.commonTS 
+and is manly there for conflict avoidance
+
+the section indicates a scope of object found in this sup tree.
+like menu. contains all menu Templates
+there are currently 2 Exceptions to this rule (config and page)
+
+the objectdefinition is the Copy template for the Object.
+
+Automagic FileLoding
+--------------------
+CommonTS Predifines some files Which will be loaded if present for speedly development:
+imagefiles:
+images/favicon*
+- if found the favicon/shortcuticon for the site is set automaticaly
+
+the following CSS files will be loaded:
+  css/reset.css  
+  - if you use an CSS reset file
+
+  css/rte.css  
+  - ths should be your Rich Text editor Stylesheed so all Classes Defined there are automaticly present in Frontend as welll
+  css/layout.css
+  - the main Layout of your site
+  css/print.css
+  - the print layout of your site of course with media="print" set.
+
+Shothandle Constants
+--------------------
+
+there are some short handle constants you can use in in your Templates for easy access to most common path
+these are configurable via the extension manager
+
+    # Path to the Template Directory
+    cts.tpl = fileadmin/template/
+    # Path to the Javascript Directory
+    cts.js = fileadmin/template/javascript/
+    # Path to the CSS Directory
+    cts.css = fileadmin/template/css/
+    # Path to the Images Directory
+    cts.img = fileadmin/template/images/
+
+example usage in your Typoscript Template could be the following
+
+    page.includeCSS.10 = {$cts.css}myCustom.css
+    page.includeJS.10 = {$cts.js}extrafunction.js
+
+if you use these Shorthand variables throughout your templates you could easly switch to a new template 
+just by changing the constants path. this gets very usfull if your site gets contouinuly developed
 
 Templates Explained
 ===================
@@ -107,6 +148,7 @@ These Options are currently in Disccution for inclusion
   * Print Page Setup
   * ulPlain // Stripped of any Classes
   * Cleaner Setup Structure by moving config and page objects 
+  * additonal Bodyclasses (for easy branch Seperation Based on Constants)
 
 Known Problems
 ==============
