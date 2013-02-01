@@ -4,6 +4,7 @@
 */
 ### BASIC Enable Disable Settings
 
+### ENABLE
 # cat=common ts/enable/20; type=options[Development,Production]; label=Context:Select the Context you Are Working on in Production Kontext JS + CSS will be minimized and Concatinated (if possible)
 plugin.tx_commonts.config.context=Development
 
@@ -12,15 +13,6 @@ plugin.tx_commonts.config.doctype=xhtml_trans
 
 # cat=common ts/enable/100; type=options[classic,TemplaVoila,modernBE]; label=Template Modul:Set the Templating system you are using for templating. so the correct classes will be addet to the body tag.
 plugin.tx_commonts.templateModule=classic
-
-# cat=common ts/language/110; type=string; label=Typo3 Language Key: Somthing like (en,de,us,dk,...) default: "en"
-plugin.tx_commonts.ConfigLanguage=en
-
-# cat=common ts/language/120; type=string; label=HTML Language Key: The html Language Key. default: "en-US"
-plugin.tx_commonts.ConfigLangKey=en-US
-
-# cat=common ts/language/130; type=string; label=locale_all: PHP: setlocale("LC_ALL", [value]); value-examples: deutsch, de_DE, danish, portuguese, spanish, french, norwegian, italian. See www.php.net for other value. Also on linux, look at /usr/share/locale/. default: "en_US"
-plugin.tx_commonts.ConfigLocaleAll=en_US
 
 # cat=common ts/enable/200; type=boolean; label=Predifine Page Object: enable the setup of a page object using "page < lib.commonTS.page"
 plugin.tx_commonts.predefinePageObject=1
@@ -40,7 +32,28 @@ plugin.tx_commonts.menu.titleLenght = 50
 # cat=common ts/enable/700; type=string; label=Max Menu title Append: This string is Appended on the end if the title is cropped
 plugin.tx_commonts.menu.titleAppend = ...
 
-### TEMPLATE setting the automagic Template
+# cat=common ts/enable/900; type=string; label=Google Analytics ID: Set your google Analytics ID here in the format: UA-XXXXXXXX-X
+plugin.tx_commonts.googleAnalytics.id=
+
+# cat=common ts/enable/900; type=string; label=Google Analytics domain name: Set your gdomain name here in the format: domain.tld
+plugin.tx_commonts.googleAnalytics.domainName=
+
+# cat=common ts/enable/900; type=boolean; label=Google Analytics Anonymize IP: if set the google feature to Anonymize IP adresses is used as requierd in Some Regions of the world
+plugin.tx_commonts.googleAnalytics.anonymizeIp=1
+
+
+
+### LANGUAGE
+# cat=common ts/language/110; type=string; label=Typo3 Language Key: Somthing like (en,de,us,dk,...) default: "en"
+plugin.tx_commonts.ConfigLanguage=en
+
+# cat=common ts/language/120; type=string; label=HTML Language Key: The html Language Key. default: "en-US"
+plugin.tx_commonts.ConfigLangKey=en-US
+
+# cat=common ts/language/130; type=string; label=locale_all: PHP: setlocale("LC_ALL", [value]); value-examples: deutsch, de_DE, danish, portuguese, spanish, french, norwegian, italian. See www.php.net for other value. Also on linux, look at /usr/share/locale/. default: "en_US"
+plugin.tx_commonts.ConfigLocaleAll=en_US
+
+### FILE: TEMPLATE setting the automagic Template
 
 # cat=common ts/file/100; type=boolean; label= Enable Automatic Template:  if Automatic Template is enabled. this will Lode some global files automagically
 plugin.tx_common.template.AutomagicEnable = 1

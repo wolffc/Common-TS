@@ -15,7 +15,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'description' => 'library of typoscript object to get your Site Development a BOOST',
 	'category' => 'fe',
 	'shy' => 0,
-	'version' => '1.3.1',
+	'version' => '1.4.0',
 	'dependencies' => '',
 	'conflicts' => '',
 	'priority' => '',
@@ -33,6 +33,9 @@ $EM_CONF[$_EXTKEY] = array(
 	'CGLcompliance' => '',
 	'CGLcompliance_note' => '',
 	'constraints' => array(
+		'dependencies' = array(
+			'typo3' => '4.0.0-6.0.99',
+		),
 		'depends' => array(
 		),
 		'conflicts' => array(

@@ -248,22 +248,35 @@ lib.commonTS.menu.ulPlain {
 ### script templates
 ###
 lib.commonTS.script.googleAnalytics = COA
-lib.commonTS.script.googleAnalytics (
-	### TODO: Write Some google Analytics Libary
-	<script type="text/javascript">
+lib.commonTS.script.googleAnalytics {
+	# Start of script Tag
+	10 = TEXT
+	10.value (
+			<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', '{$plugin.tx_commonts.googleAnalytics.id}']);
+	)
+	# Set the domain name if supplied
+	20 = TEXT
+	20.value = {$plugin.tx_commonts.googleAnalytics.domainName}
+	20.required = 1
+	20.wrap = _gaq.push(['_setDomainName', '|']);
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
-  _gaq.push(['_setDomainName', 'example.com']);
-  _gaq.push(['_gat._anonymizeIp']);
-  _gaq.push(['_trackPageview']);
+	30 = TEXT
+	30.if.isTrue = {$plugin.tx_commonts.googleAnalytics.anonymizeIp}
+	30.value = _gaq.push(['_gat._anonymizeIp']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+	# End of the Script Tag
+	900 = TEXT
+	900.value (
+			_gaq.push(['_trackPageview']);
 
-</script>
-)
+			(function() {
+			  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+		)
+}
 
