@@ -144,10 +144,11 @@ lib.commonTS.page.bodyTagCObject.20 {
 [global]
 
 # use automagic?
-[globalVar = LIT:1 = {$plugin.tx_common.template.AutomagicEnable}]
+[globalVar = LIT:1 = {$plugin.tx_commonts.template.AutomagicEnable}]
 lib.commonTS.page {
 	shortcutIcon = {$cts.img}favicon*
 	includeCSS.000_cts_reset = {$cts.css}reset.css
+	includeCSS.000_cts_reset = {$cts.css}normalize.css
 	includeCSS.000_cts_rte = {$cts.css}rte.css
 	includeCSS.000_cts_layout = {$cts.css}layout.css
 	includeCSS.000_cts_print = {$cts.css}print.css

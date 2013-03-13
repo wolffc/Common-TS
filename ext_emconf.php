@@ -12,10 +12,10 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Common TS',
-	'description' => 'library of typoscript object to get your Site Development a BOOST',
+	'description' => 'Library of Typoscript object to get your Site Development a BOOST',
 	'category' => 'fe',
 	'shy' => 0,
-	'version' => '1.4.0',
+	'version' => '1.4.1',
 	'dependencies' => '',
 	'conflicts' => '',
 	'priority' => '',

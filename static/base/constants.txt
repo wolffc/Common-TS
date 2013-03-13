@@ -56,7 +56,7 @@ plugin.tx_commonts.ConfigLocaleAll=en_US
 ### FILE: TEMPLATE setting the automagic Template
 
 # cat=common ts/file/100; type=boolean; label= Enable Automatic Template:  if Automatic Template is enabled. this will Lode some global files automagically
-plugin.tx_common.template.AutomagicEnable = 1
+plugin.tx_commonts.template.AutomagicEnable = 1
 
 # cat=common ts/file/110; type=string; label= Template Base Path (AT): The Base Path of to your Template folder include the slash at the end "...plate/"
 cts.tpl = fileadmin/template/
