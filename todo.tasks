@@ -1,0 +1,14 @@
+Stable Relase:
+ ☐ creation of lib.commonTS.selftest (wich displays all Elements typses)
+ ☐ Testpage displaying all the elements types
+ ☐ selftest.js for testing
+ ☐ spellcheck all comments
+ ☐ introduction video (see below)
+
+Introduction Video:
+ ☐ motivation, up-to-date Typo3 default configuration, development speed by Convention over Configuration, Search Engine Friendly
+ ☐ what its not: ultra-light html source-code
+ ☐ installation
+ ☐ default HTML source
+ ☐ html meta data
+ ☐ classes and ids with common TS
