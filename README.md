@@ -10,21 +10,22 @@ Common TS is a Pure Typoscript Extension trying to Speed up Your Typo3 Developme
 * support for Diffrent Templating Aproaches Classic / Templavoila / MondernBE Grid Layouts
 * Search Engine Friendly HTML
 * support for XHTML / and HTML5
+* Easy and fast to use. install, include static template, go!
 
 How To Use 
 ----------
 * Install the extension via Extension manager
-* Include the static Extension template directly after css_styled_content (important!)
+* Include the static Extension template "Common TS Base" directly after css_styled_content (important!)
 * check out the Constants Editor for COMMON TS configuration Options
 
 why should the commonTS Static Template be included directly after css_styled_content
 for convinicen Common_TS strips the HTML Content Element of the div-wrap around it (Configuration Option). 
 therefore it needes to be loaded after css_styled content. also Common TS pedefines a Global config and page object (also configurationable)
-but some extension write directly to the "page" object and if the commonTS.page object would be copied after such an event.
-the written data would be lost and you get a hard time debugging it. therefore keep it right after css_styled_content and don't worry :)
+but some extension write directly to the "page" object and if the commonTS.page object would be loaded after such an 3rd Party extension the other extensions Data would be lost. such errors are hard to find therefore keep it right after css_styled_content and don't worry :)
 
 example Typoscript
 ------------------
+there is now a "Common TS Demo Page" Static Template wich generates a Demo Page you could use in your installation to Get to know this extension more. and see some of its outputs.
 
 ### ul/li Menu 3 Layers Deep
 
@@ -49,7 +50,7 @@ so the menu is easily stylable with css. also the menu gives you some search eng
 
 ### Changing an an element-style based on a Page id
     .my-element {background:yellow} 
-    #cts-page-16 {background:red}
+    #cts-page-16 .my-element {background:red}
 
 Configuration Option (Constants Editor)
 =======================================
