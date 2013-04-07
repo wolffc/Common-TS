@@ -167,6 +167,7 @@ page < lib.commonTS.page
 lib.commonTS.menu.ul = HMENU
 lib.commonTS.menu.ul {
 	1 = TMENU
+	1.noBlur = 1
 	1.wrap = <ul>|</ul>
 	1.NO = 1
 	1.NO {
@@ -237,6 +238,7 @@ tt_content.stdWrap.innerWrap.if {
 lib.commonTS.menu.ulPlain = HMENU
 lib.commonTS.menu.ulPlain {
 	1 = TMENU
+	1.noBlur = 1
 	1.wrap = <ul>|</ul>
 	1.NO = 1
 	1.NO {
@@ -277,7 +279,6 @@ lib.commonTS.script.googleAnalytics {
 			  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 			  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			})();
-		</script>
-		)
+			</script>
+	)
 }
-

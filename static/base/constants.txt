@@ -2,6 +2,8 @@
 	@autor: Christian Wolff <chris@connye.com>
 	@description: CommonTS Base Constants
 */
+
+plugin.tx_commonts.baseTSIncluded = 1
 ### BASIC Enable Disable Settings
 
 ### ENABLE

@@ -1,0 +1,165 @@
+#make shure the base is included
+## FIXME: include the base again
+##<INCLUDE_TYPOSCRIPT: source="FILE:EXT:commonts/static/base/setup.txt">
+
+temp.commonTS.demo.1 {
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:commonts/res/demopage/demo1.ts">
+}
+temp.commonTS.demo.2 {
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:commonts/res/demopage/demo2.ts">
+}
+temp.commonTS.demo.3 {
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:commonts/res/demopage/demo3.ts">
+}
+temp.commonTS.demo.4 {
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:commonts/res/demopage/demo4.ts">
+}
+
+
+temp.commonTS.demo.ExampleTemplate = COA
+temp.commonTS.demo.ExampleTemplate {
+	wrap = <div class="cts-demo-section">|</div>
+	10 = TEXT
+	10.wrap = <h2>|</h2>
+	10.value = DEMO HEADLINE TO BE REPLACED
+
+	15 = TEXT
+	15.wrap = <p>|</p>
+	15.value = Desciption
+
+
+	# HTML
+	20 = COA
+	20 {
+		wrap = <div class="cts-code-container"><div class="cts-title">Preview</div><div class="cts-demo-html">|</div></div>
+		# 10 Demo Object will be inserted here 
+	}
+
+	# HTML Encoded
+	30 = COA
+	30 {
+		stdWrap.htmlSpecialChars = 1
+		stdWrap.wrap = <div class="cts-code-container"><div class="cts-title">HTML (output)</div><div class="cts-demo-html-encoded">|</div></div>
+	}
+
+	# Typoscript Source
+	40 = COA
+	40 {
+		stdWrap.htmlSpecialChars = 1
+		stdWrap.wrap = <div class="cts-code-container"><div class="cts-title">Typoscript</div><div class="cts-demo-ts-source"><pre>|</pre></div></div>
+		10 = FILE
+	}
+}
+
+###
+### Demo Page Object Containing All Examples
+###
+
+
+lib.commonTS.demo.page = COA
+lib.commonTS.demo.page {
+	10 = TEXT
+	10.value = Common TS Demo Page
+	10.wrap = <h1>|</h1>
+
+	20 = COA
+	20 {
+		10 = TEXT
+		10.value = This is the Main Demonstration Should give you Some Introduction into CommonTS and why its a good idea to used it. The Maingoal of CommonTS is to give the Developer of a typo3-website a fast and workable soulution for site development. by setting mondern defaults for a lot of configuration values. including css classes and ids in HTML elements like body or ul/li structures of menus. this gives you the possiblity be quick in styling of your page.
+		10.wrap = <p>|</p>
+
+		20 < .10 
+		20.value = <b>Important:</b> You should Create an Tree Of Pages in The Backend as all the Demo Menus on this Page featuring your Pagetree
+
+		30 < .10
+		20.value = all CSS-Classes and ids in CommonTS are prefixed With <i>cts-</i>* like cts-act for an active menu state, this is to make common ts Mostly confilict free.
+
+		40 < .10 
+		40.value = <b>Automatic Files loading:</b> in the Constants Editor your Should Configure the path to your Template directory this enables commonTS to Load some files automatically. commonTS will try to load the following files (in order) reset.css, normalize.css, rte.css, layout.css, print.css (media=print). also a shortcut icon is loaded from your images folder with the name favicon*.
+	}
+	# Inserting the first Demo
+	30 < temp.commonTS.demo.ExampleTemplate
+	30 {
+		# title
+		10.value = 1. lib.common.menu.ul - Full Featured SEO Friendly UL/LI Menu. 
+		# Description
+		15.value = This Shows a Fullfeatured Menu containing Classes for All Menu States (NO,CUR,ACT and IFSUB-states). this also features an link title generated out of the page abstract
+		20.10 < temp.commonTS.demo.1.10
+		30.10 < .20.10
+		40.10.file = EXT:commonts/res/demopage/demo1.ts
+	}
+
+	# Inserting the second Demo
+	40 < temp.commonTS.demo.ExampleTemplate
+	40 {
+		# title
+		10.value = 2. lib.common.menu.ulSimple - a Lighter Version without IFSUB configuration
+		# Description
+		15.value = This Shows a Full featured Menu containing Only Configuration For the main Item States (NO,CUR,ACT. this also features an link title generated out of the page abstract
+		20.10 < temp.commonTS.demo.1.10
+		30.10 < .20.10
+		40.10.file = EXT:commonts/res/demopage/demo1.ts
+	}
+
+	# Inserting the third Demo
+	50 < temp.commonTS.demo.ExampleTemplate
+	50 {
+		# title
+		10.value = 3. lib.commonTS.menu.ulMinimal - Minimal UL Menu just the NO state ( 2 Levels deep wrapped in navigation)
+		# Description
+		15.value =  This is is the  Minimal of An Menu featureing only the NO but it still has features like classes for first/last and  
+		20.10 < temp.commonTS.demo.1.10
+		30.10 < .20.10
+		40.10.file = EXT:commonts/res/demopage/demo3.ts
+	}
+
+	# Inserting the Fourth Demo
+	60 < temp.commonTS.demo.ExampleTemplate
+	60 {
+		# title
+		10.value = 4. lib.commonTS.menu.ulPlain - Plain menu no exta css Classes
+		# Description
+		15.value = this Plain Menu features no extra CSS classes this is a good Start if you have to write a custom menu definition for your site.
+		20.10 < temp.commonTS.demo.1.10
+		30.10 < .20.10
+		40.10.file = EXT:commonts/res/demopage/demo4.ts
+	}
+	
+
+	# Deisplay The Whole Base ExampleTemplate
+	900 = COA
+	900 {
+		wrap = <div class="cts-demo-section">|</div>
+		10 = TEXT
+		10.value = CommonTS Base Typoscript code.
+		10.wrap = <h2>|</h2>
+
+		20 = FILE
+		20.stdWrap.htmlSpecialChars = 1
+		20.stdWrap.wrap = <div class="cts-demo-ts-source"><pre>|</pre></div>
+		20.file = EXT:commonts/static/base/setup.txt
+	}
+
+	# hiding everything which might be outputted
+	999 = TEXT
+	999.value = <div style="display:none">
+}
+
+# Clear the page Object
+page >
+page < lib.commonTS.page
+page {
+	#includeJS.10 = http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
+	#includeJS.10.external = 1
+	#includeJS.20 = EXT:commonts/res/demopage/js/jquery-htmlBeautify.js
+	includeCSS.10 = EXT:commonts/res/demopage/css/layout.css
+
+
+	1 < lib.commonTS.demo.page
+
+	9999 = TEXT
+	9999.value = </div>
+}
+
+
+

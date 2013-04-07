@@ -1,0 +1,37 @@
+
+body {
+	background: #eee;
+	color: #000;
+	font-family: Helvetica, Arial, Sans-serif
+
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0.5em;
+	background: #ccc;
+}
+
+.cts-demo-section {
+	margin: 10px;
+	padding: 10px;
+	border: double 3px #000;
+	background: #fff;
+}
+
+.cts-code-container {
+	border: 1px solid #999;
+	margin: 0.5em 0;
+	padding: 0em;
+}
+.cts-title {
+	font-weight: bold;
+	background: #ccc;
+	margin: 0;
+	padding: 0.5em;
+}
+.cts-demo-html-encoded,
+.cts-demo-ts-source {
+	background:#eee;
+	padding:5px;
+}
