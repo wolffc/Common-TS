@@ -23,6 +23,10 @@ lib.commonTS.config {
 	removeDefaultJS = 1
 	renderCharset = utf-8
 	metaCharset = utf-8
+	# Make Cross Domain Links possible
+	typolinkCheckRootline = 1
+	# supported Till Typo3 4.2 
+	typolinkEnableLinksAcrossDomains = 1
 
 
 }
@@ -37,6 +41,7 @@ lib.commonTS.config {
 	compressCss = 1
 	minifyCSS = 1 
 	concatenateCss = 1
+
 }
 [global]
 
