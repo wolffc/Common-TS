@@ -252,10 +252,9 @@ lib.commonTS.menu.ulPlain {
 ###
 lib.commonTS.script.googleAnalytics = COA
 lib.commonTS.script.googleAnalytics {
-	# Start of script Tag
+	wrap = <script type="text/javascript">|</script>
 	10 = TEXT
 	10.value (
-			<script type="text/javascript">
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', '{$plugin.tx_commonts.googleAnalytics.id}']);
 	)
@@ -279,6 +278,22 @@ lib.commonTS.script.googleAnalytics {
 			  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 			  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			})();
-			</script>
 	)
 }
+lib.commonTS.script.browser-update-org = TEXT
+lib.commonTS.script.browser-update-org {
+	wrap = <script type="text/javascript">|</script>
+	value (
+		var $buoop = {} 
+		$buoop.ol = window.onload; 
+		window.onload=function(){ 
+		 try {if ($buoop.ol) $buoop.ol();}catch (e) {} 
+		 var e = document.createElement("script"); 
+		 e.setAttribute("type", "text/javascript"); 
+		 e.setAttribute("src", "http://browser-update.org/update.js"); 
+		 document.body.appendChild(e);
+		}
+	)
+}
+
+[global]

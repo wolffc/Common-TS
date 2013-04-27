@@ -7,41 +7,44 @@ plugin.tx_commonts.baseTSIncluded = 1
 ### BASIC Enable Disable Settings
 
 ### ENABLE
-# cat=common ts/enable/20; type=options[Development,Production]; label=Context:Select the Context you Are Working on in Production Kontext JS + CSS will be minimized and Concatinated (if possible)
+# cat=common ts/enable/; type=options[Development,Production]; label=Context:Select the Context you Are Working on in Production Kontext JS + CSS will be minimized and Concatinated (if possible)
 plugin.tx_commonts.config.context=Development
 
-# cat=common ts/enable/50; type=options[xhtml_trans,xhtml_strict,html5]; label=Html Doctype:Sets the Doctype of the page object. default is 'xhtml_trans'
+# cat=common ts/enable/; type=options[xhtml_trans,xhtml_strict,html5]; label=Html Doctype:Sets the Doctype of the page object. default is 'xhtml_trans'
 plugin.tx_commonts.config.doctype=xhtml_trans
 
-# cat=common ts/enable/100; type=options[classic,TemplaVoila,modernBE]; label=Template Modul:Set the Templating system you are using for templating. so the correct classes will be addet to the body tag.
+# cat=common ts/enable/; type=options[classic,TemplaVoila,modernBE]; label=Template Modul:Set the Templating system you are using for templating. so the correct classes will be addet to the body tag.
 plugin.tx_commonts.templateModule=classic
 
-# cat=common ts/enable/200; type=boolean; label=Predifine Page Object: enable the setup of a page object using "page < lib.commonTS.page"
+# cat=common ts/enable/; type=boolean; label=Predifine Page Object: enable the setup of a page object using "page < lib.commonTS.page"
 plugin.tx_commonts.predefinePageObject=1
 
-# cat=common ts/enable/300; type=boolean; label=Predifine Global Config Object: enable the setup of a global config object using "config < lib.commonTS.config"
+# cat=common ts/enable/; type=boolean; label=Predifine Global Config Object: enable the setup of a global config object using "config < lib.commonTS.config"
 plugin.tx_commonts.predefineConfigObject=1
 
-# cat=common ts/enable/400; type=boolean; label=Clear Cache At midnight: enables/disables the config.cache_clearAtMidnight option. in the prdifinde config object.
+# cat=common ts/enable/; type=boolean; label=Clear Cache At midnight: enables/disables the config.cache_clearAtMidnight option. in the prdifinde config object.
 plugin.tx_commonts.ConfigClearCacheAtMidnight=1
 
-# cat=common ts/enable/500; type=boolean; label=Remove Wrap Around HTML CE: if set the wrap around the html content Element is removed
+# cat=common ts/enable/; type=boolean; label=Remove Wrap Around HTML CE: if set the wrap around the html content Element is removed
 plugin.tx_commonts.RemoveHtmlWrap=1
 
-# cat=common ts/enable/600; type=int+; label=Max Menu title Length: Set the Lenght of the title attribute used in titles.
+# cat=common ts/enable/; type=int+; label=Max Menu title Length: Set the Lenght of the title attribute used in titles.
 plugin.tx_commonts.menu.titleLenght = 50
 
-# cat=common ts/enable/700; type=string; label=Max Menu title Append: This string is Appended on the end if the title is cropped
+# cat=common ts/enable/; type=string; label=Max Menu title Append: This string is Appended on the end if the title is cropped
 plugin.tx_commonts.menu.titleAppend = ...
 
-# cat=common ts/enable/900; type=string; label=Google Analytics ID: Set your google Analytics ID here in the format: UA-XXXXXXXX-X
+# cat=common ts scripts/enable/; type=string; label=Google Analytics ID: Set your google Analytics ID here in the format: UA-XXXXXXXX-X
 plugin.tx_commonts.googleAnalytics.id=
 
-# cat=common ts/enable/900; type=string; label=Google Analytics domain name: Set your gdomain name here in the format: domain.tld
+# cat=common ts scripts/enable/; type=string; label=Google Analytics domain name: Set your gdomain name here in the format: domain.tld
 plugin.tx_commonts.googleAnalytics.domainName=
 
-# cat=common ts/enable/900; type=boolean; label=Google Analytics Anonymize IP: if set the google feature to Anonymize IP adresses is used as requierd in Some Regions of the world
+# cat=common ts scripts/enable/; type=boolean; label=Google Analytics Anonymize IP: if set the google feature to Anonymize IP adresses is used as requierd in Some Regions of the world
 plugin.tx_commonts.googleAnalytics.anonymizeIp=1
+
+# cat=common ts scripts/enable/; type=string; label=Browser Update Options: JSON string of configuration options for $buoop = {OPTIONS} see for details http://browser-update.org/customize.html
+lib.commonTS.script.browser-update-org.options = 
 
 
 
