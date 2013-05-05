@@ -146,7 +146,6 @@ Possibble Extensions
 ====================
 These Options are currently in Disccution for inclusion
   * Print Page Setup
-  * ulPlain // Stripped of any Classes
   * Cleaner Setup Structure by moving config and page objects 
   * additonal Bodyclasses (for easy branch Seperation Based on Constants)
 

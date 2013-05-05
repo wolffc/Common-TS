@@ -284,7 +284,7 @@ lib.commonTS.script.browser-update-org = TEXT
 lib.commonTS.script.browser-update-org {
 	wrap = <script type="text/javascript">|</script>
 	value (
-		var $buoop = {} 
+		var $buoop = {{$lib.commonTS.script.browser-update-org.options}} 
 		$buoop.ol = window.onload; 
 		window.onload=function(){ 
 		 try {if ($buoop.ol) $buoop.ol();}catch (e) {} 
