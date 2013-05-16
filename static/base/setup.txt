@@ -16,7 +16,6 @@ lib.commonTS.config {
 	htmlTag_langKey = {$plugin.tx_commonts.ConfigLangKey}
 	uniqueLinkVars = 1
 	sendCacheHeaders = 1
-	typolinkCheckRootline = 1
 	meaningfulTempFilePrefix = 100
 	prefixLocalAnchors = all
 	spamProtectEmailAddresses = ascii
