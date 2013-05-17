@@ -20,12 +20,14 @@ lib.commonTS.config {
 	prefixLocalAnchors = all
 	spamProtectEmailAddresses = ascii
 	removeDefaultJS = 1
+	inlineStyle2TempFile = 1
 	renderCharset = utf-8
 	metaCharset = utf-8
 	# Make Cross Domain Links possible
 	typolinkCheckRootline = 1
 	# supported Till Typo3 4.2 
 	typolinkEnableLinksAcrossDomains = 1
+	content_from_pid_allowOutsideDomain = 1
 
 
 }
@@ -36,11 +38,10 @@ lib.commonTS.config {
 	compressJs = 1
 	minifyJS = 1
 	concatenateJs = 1
-
 	compressCss = 1
 	minifyCSS = 1 
 	concatenateCss = 1
-
+	disablePrefixComment = 1
 }
 [global]
 
@@ -151,12 +152,12 @@ lib.commonTS.page.bodyTagCObject.20 {
 [globalVar = LIT:1 = {$plugin.tx_commonts.template.AutomagicEnable}]
 lib.commonTS.page {
 	shortcutIcon = {$cts.img}favicon*
-	includeCSS.000_cts_reset = {$cts.css}reset.css
-	includeCSS.000_cts_reset = {$cts.css}normalize.css
-	includeCSS.000_cts_rte = {$cts.css}rte.css
-	includeCSS.000_cts_layout = {$cts.css}layout.css
-	includeCSS.000_cts_print = {$cts.css}print.css
-	includeCSS.000_cts_print.media = print
+	includeCSS.00010_cts_reset = {$cts.css}reset.css
+	includeCSS.00020_cts_normalize = {$cts.css}normalize.css
+	includeCSS.00030_cts_rte = {$cts.css}rte.css
+	includeCSS.00040_cts_layout = {$cts.css}layout.css
+	includeCSS.00050_cts_print = {$cts.css}print.css
+	includeCSS.00050_cts_print.media = print
 }
 [global]
 
