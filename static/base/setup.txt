@@ -137,7 +137,8 @@ lib.commonTS.page.bodyTagCObject.20 {
 }
 [global]
 
-[globalVar= LIT:modernBE = {$plugin.tx_commonts.templateModule}]
+# Renaming To Backend Layouts
+[globalVar= LIT:backend_layout = {$plugin.tx_commonts.templateModule}] || [globalVar= LIT:modernBE = {$plugin.tx_commonts.templateModule}]
 lib.commonTS.page.bodyTagCObject.20 {
 	# modern BE Specific Layout Field
 	10.data = levelfield:-1,backend_layout_next_level,slide

@@ -13,7 +13,7 @@ plugin.tx_commonts.config.context=Development
 # cat=common ts/enable/; type=options[xhtml_trans,xhtml_strict,html5]; label=Html Doctype:Sets the Doctype of the page object. default is 'xhtml_trans'
 plugin.tx_commonts.config.doctype=xhtml_trans
 
-# cat=common ts/enable/; type=options[classic,TemplaVoila,modernBE]; label=Template Modul:Set the Templating system you are using for templating. so the correct classes will be addet to the body tag.
+# cat=common ts/enable/; type=options[classic,TemplaVoila,backend_layout]; label=Template Modul:Set the Templating system you are using for templating. so the correct classes will be addet to the body tag.
 plugin.tx_commonts.templateModule=classic
 
 # cat=common ts/enable/; type=boolean; label=Predifine Page Object: enable the setup of a page object using "page < lib.commonTS.page"
