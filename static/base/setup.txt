@@ -177,6 +177,7 @@ lib.commonTS.menu.ul {
 	1.wrap = <ul>|</ul>
 	1.NO = 1
 	1.NO {
+		wrapItemAndSub.insertData = 1
 		wrapItemAndSub = <li class="cts-first cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li> |*| <li class="cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li> |*| <li class="cts-last cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li>
 		ATagTitle {
 			field = abstract // description
