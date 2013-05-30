@@ -177,7 +177,7 @@ lib.commonTS.menu.ul {
 	1.wrap = <ul>|</ul>
 	1.NO = 1
 	1.NO {
-		wrapItemAndSub = <li class="cts-first">|</li> |*| <li>|</li> |*| <li class="cts-last">|</li>
+		wrapItemAndSub = <li class="cts-first cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li> |*| <li class="cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li> |*| <li class="cts-last cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li>
 		ATagTitle {
 			field = abstract // description
 			stripHtml = 1
@@ -188,30 +188,30 @@ lib.commonTS.menu.ul {
 	}
 	1.IFSUB < .1.NO
 	1.IFSUB {
-		wrapItemAndSub = <li class="cts-first cts-ifsub">|</li> |*| <li class="cts-ifsub">|</li> |*| <li class="cts-last cts-ifsub">|</li>
+		wrapItemAndSub = <li class="cts-first cts-ifsub cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li> |*| <li class="cts-ifsub cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li> |*| <li class="cts-last cts-ifsub cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li>
 	}
 	
 	1.CUR < .1.NO
 	1.CUR {
-		wrapItemAndSub = <li class="cts-first cts-cur">|</li> |*| <li class="cts-cur">|</li> |*| <li class="cts-last cts-cur">|</li>
+		wrapItemAndSub = <li class="cts-first cts-cur cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li> |*| <li class="cts-cur cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li> |*| <li class="cts-last cts-cur cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li>
 		ATagParams = class="cts-cur"
 	}
 	
 	1.CURIFSUB < .1.NO
 	1.CURIFSUB {
-		wrapItemAndSub = <li class="cts-first cts-ifsub cts-curifsub cts-cur">|</li> |*| <li class="cts-ifsub cts-curifsub cts-cur">|</li> |*| <li class="cts-last cts-ifsub cts-curifsub cts-cur">|</li>
+		wrapItemAndSub = <li class="cts-first cts-ifsub cts-curifsub cts-cur cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li> |*| <li class="cts-ifsub cts-curifsub cts-cur cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li> |*| <li class="cts-last cts-ifsub cts-curifsub cts-cur cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li>
 		ATagParams = class="cts-cur cts-curifsub"
 	}
 	
 	1.ACT < .1.NO
 	1.ACT {
-		wrapItemAndSub = <li class="cts-first cts-act">|</li> |*| <li class="cts-act">|</li> |*| <li class="cts-last cts-act">|</li>
+		wrapItemAndSub = <li class="cts-first cts-act cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li> |*| <li class="cts-act cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li> |*| <li class="cts-last cts-act cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li>
 		ATagParams = class="cts-act"
 	}
 	
 	1.ACTIFSUB < .1.NO
 	1.ACTIFSUB {
-		wrapItemAndSub = <li class="cts-first cts-ifsub cts-actifsub cts-act">|</li> |*| <li class="cts-ifsub cts-actifsub cts-act">|</li> |*| <li class="cts-last cts-ifsub cts-actifsub cts-act">|</li>
+		wrapItemAndSub = <li class="cts-first cts-ifsub cts-actifsub cts-act cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li> |*| <li class="cts-ifsub cts-actifsub cts-act cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li> |*| <li class="cts-last cts-ifsub cts-actifsub cts-act cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}">|</li>
 		ATagParams = class="cts-act cts-actifsub"
 	}
 }

@@ -1,4 +1,5 @@
-(add new changes on top of this file)
+13-05-2013 Christian Wolff <chris@connye.com>
+added cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}  to highlight individual positions of menu items
 
 12-08-30 Christian Wolff <chris@connye.com>
   version 1.3.0
