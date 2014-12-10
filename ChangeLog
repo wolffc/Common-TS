@@ -1,3 +1,7 @@
+
+Wed Dec 10 08:23:31 UTC 2014 Christian Wolff <cwolff@aer.de>
+RELEASE: Version 1.7.1
+
 13-05-2013 Christian Wolff <chris@connye.com>
 added cts-pid-{field:uid} cts-pos-{register:count_MENUOBJ}  to highlight individual positions of menu items
 
