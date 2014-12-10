@@ -6,6 +6,10 @@
 ###
 ### Config Object
 ###
+
+## Copy Typo3 Default Config (mostly Extbase)
+lib.commonTS.config < config
+
 lib.commonTS.config {
 	doctype = {$plugin.tx_commonts.config.doctype}
 	xmlprologue = none
@@ -33,6 +37,7 @@ lib.commonTS.config {
 }
 
 [globalVar= LIT:Production = {$plugin.tx_commonts.config.context}]
+
 lib.commonTS.config {
 	# enable Compression of JS + CSS
 	compressJs = 1
